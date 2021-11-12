@@ -1,49 +1,93 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-  </head>
-  <style>
-    body {
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
+    <html xmlns="https://www.w3.org/1999/xhtml"> 
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+   <link rel="stylesheet" href="styles.css" />
+
+   <link rel="stylesheet" href="build/css/intlTelInput.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="build/js/intlTelInput.js"></script>
+   <link
+     rel="stylesheet"
+     href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.css"
+   />
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
+
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+        <title>DirectWA | Send WhatsApp Messages without saving the contact number</title> 
+        <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+        <script type="text/javascript"> 
+        </script> 
+        <style type="text/css">
+            body, html { font-family: Helvetica, sans-serif; font-size:23px; font-weight:400; line-height:26px; color:#000; overflow-x: hidden; }
+            /* Full-width input fields */ 
+            input[type=tel] { width: 100%; padding: 15px; margin: 150px 0 22px 0 !important; font-size:18px; font-weight:200; color:#000; border-radius: 5px; position:relative; top:10%; text-align:center; }
+            input[type=tel]:focus { outline: none; placeholder: none; }
+            /* Set a style for the submit button */ 
+            .btn { font-size:17px; font-weight:500; line-height:19px; border-radius: 5px; background-color:#4aca59; color: white; padding: 16px 20px; border: none; cursor: pointer; width: 150px; opacity: 0.9; margin-bottom:10px; position:relative; top:15%; } 
+            .btn:hover { opacity: 1; } 
+            /* Add styles to the form container */ 
+            .spacing{ padding:35px 8px 35px 8px !important; border-radius: 25px; } 
+            form{ text-align: center;height:100%; } 
+            .iti__selected-flag{
+                margin: 15px 5px !important;
+            }
+            .iti input, .iti input[type=text], .iti input[type=tel]{
+
+                /* margin:150px 0 22px 0 !important; */
+                margin:50px 0 22px 0 !important;
+            }
+            .iti__flag.iti__in{
+                background-position: -2413px 0px;
+            }
+            .iti--allow-dropdown .iti__flag-container:hover .iti__selected-flag{
+                background-color:transparent;
+                
+}
+.iti__country-list{
+
+    top: 275px;
+    position: fixed !important;
+    max-height: 250px !important;
+}
+        </style> 
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-207418543-1"></script>
+        <script> 
+            window.dataLayer = window.dataLayer || []; 
+            function gtag(){dataLayer.push(arguments);} 
+            gtag('js', new Date()); gtag('config', 'UA-207418543-1'); 
+        </script> 
+        
+    </head> 
+    <body> 
+<!-- nav bar -->
+<body>
+    
+    <div  class="logo" style="background-image: linear-gradient(to right, white, grey);">
+      <span class="dir" style="color: red; text-transform: capitalize; font-size: 50px; ">
+            <b> Direct<span style="color: green;">WA</span> </b></span>
+         </div>
+     
+         <style>
+             *{
+                 margin: 0;
+                 padding: 0;
+                 font-family: sans-serif;
+             }
+             .dir{
+ display: block;
+ padding: 20px;
+
+}
+                  body {
       background-image: linear-gradient(to right, grey, white);
     }
-    * {
-      margin: 0;
-      padding: 0;
-      transition: 0.5s linear;
-    }
-    #bttn:hover {
-      background-color: rgb(0, 0, 0);
-      color: white;
-      transition: 0.8s ease;
-    }
-    .form {
-      display: block;
-      position: inherit;
-      top: 25%;
-      
-    }
-
-    .btn {
-      display: block;
-      position: inherit;
-      top: 25%;
-    }
-    .chatbtn {
-      display: flex;
-      justify-content: flex-end;
-      right: 20px;
-      bottom: 20px;
-      position: fixed;
-    }
     .content {
-      height: 350px;
+      height: 280px;
       width: 50%;
-      background-image: linear-gradient(
-        to right,
+      background-image: linear-gradient(  to right,
         rgb(247, 199, 207),
         white,
         rgb(173, 192, 241)
@@ -53,42 +97,127 @@
       left: 25%;
       top: 30%;
     }
-    #inp {
-      width: 450px;
-      height: 50px;
-      border-top: none;
-      border-right: none;
-      border-left: none;
-      border-radius: 15px;
-      text-align: center;
-      display:flex;
-      position:relative;   
-      left: 27%;
-    }
-    #inp:hover {
-      text-decoration: solid;
-      transition: 0.8s ease-in-out;
-    }
-    #bttn {
-      height: 35px;
-      width: 100px;
-      border: 3px ridge rgba(0, 0, 0, 0.5);
-      border-radius: 10px;
-      display: block;
-      position: relative;
-      left: 280%;
-      top: 80px;
-      }
+   
+.btn:hover{
+    color: white;
+    background-color: black;
+    transition: 0.8s ease;
+}
 
-    .alert {
-      display: inline;
-      position: absolute;
+/* mobile View */
+@media only screen and (max-width: 550px){
+
+  .content{
+    display: block;
+    justify-content: center;
+    align-items: center;
+  width: 400px;
+  left: 10%;
+ 
+     }
+
+
+}
+         </style>
+
+
+      <div class="content">
+        <div class="spacing" style=" background-image: linear-gradient(  to right,
+        rgb(247, 199, 207),
+        white,
+        rgb(173, 192, 241)
+      );" > 
+      
+            <form>
+            <input style="border-top: none; border-left: none; border-right: none;" id="phone" placeholder="Enter recepient's number" type="tel" /><br /> 
+            <button class="btn" id="button" type="button">Message</button>
+        </form>
+        <script src="build/js/intlTelInput.js"></script>
+    <script>
+  
+    // Vanilla Javascript
+    var input = document.querySelector("#phone");
+    window.intlTelInput(input,({
+      // options here
+    }));
+ 
+    $(document).ready(function() {
+        $('.iti__flag-container').click(function() { 
+          var countryCode = $('.iti__selected-flag').attr('title');
+          //window.alert("Enter a Country code ");
+                    
+          var countryCode = countryCode.replace(/[^0-9]/g,'')
+          $('#phone').val("");
+          $('#phone').val("+"+countryCode+ $('#phone').val());
+          //window.alert("Enter a Country code along with 10-digit number, you have entered text"+inputvalue);
+          var inputvalue = $("#phone").val();
+           
+          
+       });
+       
+    });
+    $(document).ready(function(){ 
+        // window.alert("Enter a Country code along with 10-digit number, you have entered text"+inputvalue);
+        $('#button').click(function(e) { 
+                var inputvalue = $("#phone").val();
+                if((inputvalue.length < 15)){
+                if((inputvalue.length > 11 && inputvalue.startsWith("+"))){
+                    window.alert("start cahtting with "+inputvalue);
+                    window.location.replace("https://wa.me/"+inputvalue);
+                } 
+                else{
+                    window.alert("Enter a Country code");
+                }
+            }
+            else{
+                window.alert("Enter a Correct number");   
+            }
+            });
+                    
+             
+        }); 
+
+  </script>
+  
+<!-- <div class="alert">
+    <span class="closebtn" onclick="this.parentElement.style.display='none';"  >&times;</span>
+    <strong>Alert!</strong> <br />
+   Please Enter Your Current Whatsapp Number
+  </div>  -->
+
+
+  <div class="chatbtn">
+<div class="popup" onmouseover="myFunction()"><img src="chats.png" height="55px" width="55px" alt="chat" />
+  <span class="popuptext" id="myPopup"> <strong> Alert! </strong> <br> ThankYou </span>
+</div>
+</div>
+
+<script>
+// When the user clicks on div, open the popup
+function myFunction() {
+  var popup = document.getElementById("myPopup");
+  popup.classList.toggle("show");
+}
+</script>
+<style>
+    .chatbtn {
+      display: flex;
+      justify-content: flex-end;
+      right: 20px;
+      bottom: 20px;
+      position: fixed;
+    }
+
+    /* .alert {
+      display: block;
+      position: fixed;
       left: 0;
-      bottom: 5px;
+      bottom: 10px;
       color: rgb(43, 43, 43);
       padding: 20px;
+      font-size: 15px;
       background-color: #fabbb7;
-      width: 350px;
+      width: 300px;
       transition: 0.5s ease;
     }
 
@@ -101,7 +230,7 @@
       line-height: 20px;
       cursor: pointer;
       transition: 0.3s;
-    }
+    } */
 
     .closebtn:hover {
       color: black;
@@ -119,7 +248,7 @@
 /* The actual popup */
 .popup .popuptext {
   visibility: hidden;
-  width: 160px;
+  width: 100px;
   background-color: #555;
   color: #fff;
   text-align: center;
@@ -130,6 +259,7 @@
   bottom: 125%;
   left: 50%;
   margin-left: -80px;
+  font-size: medium;
 }
 
 /* Popup arrow */
@@ -162,145 +292,5 @@
   to {opacity:1 ;}
 }
 
-@media only screen and (max-width: 500px){
-.content{
-  width: 250px;
-  display: flex;
-  position: absolute;
-  left: 5%;
-  right: 5%;
-  height: 50%;
-}
-#inp{
-  display: flex;
-  position: relative;
-  left: 5%;
-width: 130%;
-}
-#bttn{
-  display: block;
-  position: relative;
-  left: 70%;
-
-}
-.dir{
-  display: block;
-  position: absolute;
-  left: 5%;
-}
-.alert{
-  width: 25%;
-  display: block;
-  position: absolute;
-left: 1%;
-
-
-}
-.popup{
-  display: block;
-  position:fixed;
-  right: 45%;
-  bottom: 0;
-}
-
-}
-
-@media only screen and (max-width: 800px){
-.content{
-  width: 400px;
-  display: flex;
-  position: absolute;
-  left: 20%;
-  height: 60%;
-}
-#inp{
-  display: flex;
-  position: relative;
-  left: 28%;
-width: 180%;
-top: 15px;
-}
-#bttn{
-  display: block;
-  position: relative;
-  left: 150%;
-
-}
-.dir{
-  display: block;
-  position: absolute;
-  left: 25%;
-}
-.alert{
-  width: 25%;
-  display: block;
-  position: absolute;
-left: 1%;
-
-
-}
-.popup{
-  display: block;
-  position:fixed;
-  right: 5%;
-  bottom: 1%;
-}
-
-  </style>
-  <body>
-    <div
-      class="logo"
-      style="background-image: linear-gradient(to right, white, grey)"  >
-      <img src="Logo-website (1).png" height="50px" alt="Logo" />  
-         </div>
-
-    <center>
-      <div class="content">
-        <span class="dir" style="color: red; text-transform: capitalize; font-size: 50px;">
-            <b> Direct<span style="color: green;">WA</span> </b></span>
-
-       
-          <div class="form">
-            <input
-              id="inp"
-              type="tel"
-              name="Number"
-              placeholder="Enter Reciepnts Num"
-            />
-            <br /><br />
-          </div>
-          <div class="btn">
-            <button id="bttn" onclick="clicked()">Message</button>
-        
-        </div>
-      </div>
-
-      <script>
-        function clicked() {
-          alert("start cahtting with");
-        }
-      </script>
-    </center>
-
-<div class="alert">
-      <span class="closebtn" onclick="this.parentElement.style.display='none';"  >&times;</span>
-      <strong>Alert!</strong> <br />
-     Please Enter Your Current Whatsapp Number
-    </div> 
-
-
-    <div class="chatbtn">
-<div class="popup" onmouseover="myFunction()"><img src="chats.png" height="55px" width="55px" alt="chat" />
-    <span class="popuptext" id="myPopup"> <strong> Alert! </strong> <br> ThankYou </span>
-  </div>
-</div>
-  
-  <script>
-  // When the user clicks on div, open the popup
-  function myFunction() {
-    var popup = document.getElementById("myPopup");
-    popup.classList.toggle("show");
-  }
-  </script>
-  </body>
+</style>
 </html>
